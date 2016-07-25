@@ -1,51 +1,55 @@
+## Implementing a multiple object tracking with Particle Filter based on this reference.
+```
+M. D. Breitenstein, F. Reichlin, B. Leibe, E. Koller-Meier and L. V. Gool
+”Online multi-person tracking-by-detection from a single, uncalibrated
+camera”, IEEE Trans. Pattern Anal. Mach. Intell., vol. 33, no. 9, pp.1820
+-1833 2011.
+```
+
 This is an Eclipse Project.
 
-------Structure of Directory-----
+## Structure of Directory
 This directory contains :
 - Debug
-- Evaluate, 
-	"Store evaluation data for every experiment. ex : Eval1_ is the second experiment. Create folder of EvalN_ manually if you want to do N+1 experiments. With data format :
-		x-axis-FalseNegative-FalsePositive-TruePositive-IDSwitch-MOTA-MOTP
-(could be anything, example:
-number of particles, 
-sigma propagation, etc)
-	"
-- PETS_frame,
-	"Contain sequence of video. With filename format frame_0000.jpg "
+- Evaluate
+> Store evaluation data for every experiment. ex : Eval1_ is the second experiment. Create folder of EvalN_ manually if you want to do N+1 experiments. With data format : 
+**x-axis-FalseNegative-FalsePositive-TruePositive-IDSwitch-MOTA-MOTP**
+(could be anything, example: number of particles, sigma propagation, etc)
+
+- PETS_frame
+> Contain sequence of video. With filename **format frame_0000.jpg**
+
 - PETS_gt,
-	"Contain ground truth data with filename format frame_0000.txt. 
-	 With data format :
-		number_of_frame-x(top-left)-y(top-left)-width-height-index
-	"
+> Contain ground truth data with filename format frame_0000.txt. With data format :
+    **number_of_frame-x(top-left)-y(top-left)-width-height-index**
+
 - PETS_GT_map
-	"Contain detection maps from ground truth"
+> Contain detection maps from ground truth
+
 - PETS_map
-	"Contain detection maps from detectors"
+> Contain detection maps from detectors
 - src
 - TrackerData
-	"Contain ground truth data with filename format frame_0000.txt.
-	 With data format : 
-		number_of_frame-x(top-left)-y(top-left)-width-height-index"
+> Contain ground truth data with filename format frame_0000.txt. With data format : 
+    **number_of_frame-x(top-left)-y(top-left)-width-height-index**
 - View1_result
-	"Result of tracked objects on the image"
+> Result of tracked objects on the image
 
-Note : 
+## Note 
 There is also 
 - a documentation inside src/html/index.html
 - A python file to plot the evaluation
 	- EvaluateNumParticles (To evaluate tracker with x-axis is number of particles)
 	- EvaluatePETS (To evaluate tracker with x-axis is sigma_of_propagation (could be changed..))
----------------------------------------------------------------------------------------------------------------
 
--------Dependencies-------
-In Eclipse project. Go to Project->Properties->C/C++ Build->Settings
+##Dependencies
+In Eclipse project. Go to **Project->Properties->C/C++ Build->Settings**
 
-In GCC C++ Compiler->Miscelanneous add other flags "-std=c++11 -std=c++0x"
-In C++ Linker->Libraries, add Libraries (-l) "config++"
+In GCC C++ **Compiler->Miscelanneous->add other flags "-std=c++11 -std=c++0x"**
+In C++ **Linker->Libraries->add Libraries (-l) "config++"**
 
----------------------------------------------------------------------------------------------------------------
 
---------Configuration File Structure--------
+##Configuration File Structure
 particlefilter :
 {
     main :
