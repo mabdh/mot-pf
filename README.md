@@ -1,3 +1,5 @@
+# Multiple-Object Tracking Using Particle Filter
+This is the project for Computer Graphics Lab in University of Bonn
 ## Implementing a multiple object tracking with Particle Filter based on this reference.
 ```
 M. D. Breitenstein, F. Reichlin, B. Leibe, E. Koller-Meier and L. V. Gool
