@@ -1,0 +1,427 @@
+\hypertarget{classParticleFilter}{\section{Particle\-Filter Class Reference}
+\label{classParticleFilter}\index{Particle\-Filter@{Particle\-Filter}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classParticleFilter_a911e43a6edf42f84f8d0f2bf3fe9a81d}{Particle\-Filter} (Mat frame0=Mat(0, 0, 0), unsigned int n\-\_\-particles=0, int detidx=0, int frame=0, Rect detection\-B\-B=Rect(0, 0, 0, 0), int use\-\_\-hist=0, int imgcols=0, int imgrows=0)
+\item 
+void \hyperlink{classParticleFilter_a597529ba9f75bf4e56da5768cbc8b1a0}{get\-Main\-Data} (double sigma\-\_\-propagate\-\_\-\mbox{[}N\-U\-M\-\_\-\-S\-T\-A\-T\-E\-S\mbox{]}, double const \&sigma\-\_\-measurement\-\_\-, double const \&c\-\_\-detection\-\_\-, double const \&c\-\_\-color\-\_\-, double const \&mul\-\_\-factor\-\_\-c\-\_\-color\-\_\-, double const \&mul\-\_\-factor\-\_\-c\-\_\-detection\-\_\-, int const \&width\-\_\-default\-\_\-, int const \&height\-\_\-default\-\_\-)
+\item 
+\hypertarget{classParticleFilter_abcabd85de8860d10e5f21dc56291fdae}{int {\bfseries read\-\_\-configuration} (void)}\label{classParticleFilter_abcabd85de8860d10e5f21dc56291fdae}
+
+\item 
+void \hyperlink{classParticleFilter_a62028a3f90bd02f924fd2367451a5614}{initialization} (Rect detection)
+\item 
+bool \hyperlink{classParticleFilter_a3dd040ad3bc638548ba4582d44855fc5}{update} (Mat \&img, Mat \&img\-\_\-prev, Rect \&detection\-\_\-new, int use\-\_\-hist, int frame\-\_\-num)
+\item 
+\hypertarget{classParticleFilter_a7f99cd11047647020b6a4c90e2488c3d}{unsigned int {\bfseries get\-Num\-Particles} (void)}\label{classParticleFilter_a7f99cd11047647020b6a4c90e2488c3d}
+
+\item 
+\hypertarget{classParticleFilter_a04c223286cac007b5b06a927e3028639}{Mat\-\_\-$<$ double $>$ {\bfseries get\-Particles} (void)}\label{classParticleFilter_a04c223286cac007b5b06a927e3028639}
+
+\item 
+\hypertarget{classParticleFilter_a084bb2abe1da120fef6fc16116911957}{vector$<$ double $>$ {\bfseries get\-Weight} (void)}\label{classParticleFilter_a084bb2abe1da120fef6fc16116911957}
+
+\item 
+void \hyperlink{classParticleFilter_a8ceef9972d364c1b53803403440ef439}{prediction} (Mat \&image)
+\item 
+void \hyperlink{classParticleFilter_a81cbc751eb7bd585b0acfa380930c8de}{measurement} (Mat\-\_\-$<$ double $>$ \&\hyperlink{classParticleFilter_ae9823740efabda90ff9c24b7b8f91dc5}{particles}, Rect detection\-\_\-new, Mat H\-S\-Vinterpolated, vector$<$ Mat $>$ \&Multi\-H\-S\-V\-Interpolated, Mat \&image, int use\-\_\-hist, int frame)
+\item 
+\hypertarget{classParticleFilter_a857e2f601eee0861e4e34522433c5e7c}{int {\bfseries resampling} (void)}\label{classParticleFilter_a857e2f601eee0861e4e34522433c5e7c}
+
+\item 
+void \hyperlink{classParticleFilter_a6bdd0c3e0160e1b89d4cbfd736eaffd0}{print\-Particles} (Mat\-\_\-$<$ double $>$ \&\hyperlink{classParticleFilter_ae9823740efabda90ff9c24b7b8f91dc5}{particles})
+\item 
+void \hyperlink{classParticleFilter_a65e44b839c45cdace2aa1bc630097cf8}{print\-Weight} (void)
+\item 
+vector$<$ Point $>$ \& \hyperlink{classParticleFilter_acf5397c9e4a72db53fbea7bbe058cf4e}{get\-Point\-Target} (void)
+\item 
+\hypertarget{classParticleFilter_a57770403a97f09e9a676869da371c6ed}{void {\bfseries write\-New\-Image} (Mat \&image, int frame, Rect detection\-\_\-new)}\label{classParticleFilter_a57770403a97f09e9a676869da371c6ed}
+
+\item 
+void \hyperlink{classParticleFilter_adb05ace32154b17c2bb042ea97490ec7}{compute\-H\-S\-V\-Hist} (const Mat src, Mat \&out\-Hist)
+\item 
+\hypertarget{classParticleFilter_a41b340ab6879d08bffd5de90bce8983e}{void {\bfseries compute\-Hist\-Orientation} (const Mat \&src, Mat \&out\-Hist)}\label{classParticleFilter_a41b340ab6879d08bffd5de90bce8983e}
+
+\item 
+bool \hyperlink{classParticleFilter_a6a0dc76f01919eb2eced75ba0092d69d}{is\-In\-Boundary} (Rect r, Mat image)
+\item 
+void \hyperlink{classParticleFilter_a3586ef733bc68c6c7c56379ac018a486}{systematic\-Resampling} (vector$<$ double $>$ \&w, vector$<$ int $>$ \&indx)
+\item 
+void \hyperlink{classParticleFilter_a295b03c569caeb44cb4f6bb19a2c6b59}{H\-S\-V\-Interp} (Mat H\-S\-V1, Mat H\-S\-V2, Mat \&res)
+\item 
+int \hyperlink{classParticleFilter_acae1f0241299cc95109879173588f62f}{get\-Detection\-Index} (void)
+\item 
+Point \hyperlink{classParticleFilter_ad102c26410be44ad35abd7b237fca96d}{get\-Mean\-Position} (void)
+\item 
+int \hyperlink{classParticleFilter_a6e77900524cf6d902285818926e98c57}{get\-Tracker\-Width} (void)
+\item 
+int \hyperlink{classParticleFilter_ada58fdad64889b721f9347300c28a651}{get\-Tracker\-Height} (void)
+\item 
+void \hyperlink{classParticleFilter_a8bf63399d1566c933e46917ff8d2218c}{set\-Rely\-Detection} (bool rd)
+\item 
+bool \hyperlink{classParticleFilter_af33fa2bedc9ca22ad4ee2caba29468e0}{get\-Rely\-Detection} (void)
+\item 
+int \hyperlink{classParticleFilter_a3f4e7d132dd02967256b15d32e12b165}{get\-Times\-Occluded} (void)
+\item 
+void \hyperlink{classParticleFilter_a538bf422aad5ea4eb42fb766cd15831c}{reset\-Times\-Occluded} (void)
+\item 
+void \hyperlink{classParticleFilter_acc2dee02554e66ef0b26eb11f5a32d04}{inc\-Times\-Occluded} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Mat\-\_\-$<$ double $>$ \hyperlink{classParticleFilter_ae9823740efabda90ff9c24b7b8f91dc5}{particles}
+\item 
+\hypertarget{classParticleFilter_a49bb3d6701d3b0ca2a51f36620370310}{Mat\-\_\-$<$ double $>$ {\bfseries particles\-\_\-temp}}\label{classParticleFilter_a49bb3d6701d3b0ca2a51f36620370310}
+
+\item 
+Mat\-\_\-$<$ double $>$ \hyperlink{classParticleFilter_ab006458e205d5d2f6e6f554ee5abfe81}{particles\-\_\-new}
+\item 
+Point\-\_\-$<$ int $>$ \hyperlink{classParticleFilter_aa86c3e9fab84151e57b81035e664fefc}{P\-F\-Track}
+\item 
+Point\-\_\-$<$ int $>$ \hyperlink{classParticleFilter_a1f55e5d172c164c03fb3174fb321a251}{P\-F\-Track\-Prev}
+\item 
+Point\-\_\-$<$ double $>$ \hyperlink{classParticleFilter_a1209f1d4f8a33ea69e60cb8c021b96c2}{P\-F\-Track\-Vel}
+\item 
+vector$<$ double $>$ \hyperlink{classParticleFilter_a1363d05f9deb026bd5e07a1406a994e5}{weight}
+\item 
+vector$<$ double $>$ \hyperlink{classParticleFilter_a608013ea3cc68c34c465611444a6e25d}{cumulative}
+\item 
+vector$<$ Point\-\_\-$<$ int $>$ $>$ \hyperlink{classParticleFilter_a92daeb1540baafc2b3bf6fec5b607120}{point\-\_\-for\-\_\-particles}
+\item 
+\hypertarget{classParticleFilter_aa5f589aec6e31109661020619253170a}{unsigned int {\bfseries num\-Particles}}\label{classParticleFilter_aa5f589aec6e31109661020619253170a}
+
+\item 
+Rect \hyperlink{classParticleFilter_a594c1a59fdf0251267c64828850a085f}{detectionprev}
+\item 
+Mat \hyperlink{classParticleFilter_a4bf1b980e79eb4677a6274cbc70be0fa}{H\-S\-V\-Template}
+\item 
+Mat \hyperlink{classParticleFilter_a5cd6a05af7e09715cc7728abac18d38e}{image\-Template}
+\item 
+\hypertarget{classParticleFilter_a1cc6b17c786ba9072fd9ffbaa8d2e414}{Rect {\bfseries detection}}\label{classParticleFilter_a1cc6b17c786ba9072fd9ffbaa8d2e414}
+
+\item 
+\hypertarget{classParticleFilter_a00812e7cc3f90eced41028b01e6a4eb3}{char {\bfseries filename} \mbox{[}30\mbox{]}}\label{classParticleFilter_a00812e7cc3f90eced41028b01e6a4eb3}
+
+\item 
+\hypertarget{classParticleFilter_aa60e8238079bf881e38d89a1cd1c67ec}{int {\bfseries detection\-\_\-index} = 0}\label{classParticleFilter_aa60e8238079bf881e38d89a1cd1c67ec}
+
+\item 
+\hypertarget{classParticleFilter_a85d85c884552bc65db7e31f4c3fbd719}{int {\bfseries width\-\_\-template}}\label{classParticleFilter_a85d85c884552bc65db7e31f4c3fbd719}
+
+\item 
+\hypertarget{classParticleFilter_af15c089ca4541ccb4a98fba68fc36da0}{int {\bfseries height\-\_\-template}}\label{classParticleFilter_af15c089ca4541ccb4a98fba68fc36da0}
+
+\item 
+\hypertarget{classParticleFilter_a22c5a9164e71520d574192d0d79fd175}{int {\bfseries width\-\_\-tracker}}\label{classParticleFilter_a22c5a9164e71520d574192d0d79fd175}
+
+\item 
+\hypertarget{classParticleFilter_ab8a94b66de1cf76b6fe7c2a58a1947d3}{int {\bfseries height\-\_\-tracker}}\label{classParticleFilter_ab8a94b66de1cf76b6fe7c2a58a1947d3}
+
+\item 
+vector$<$ Rect $>$ \hyperlink{classParticleFilter_ad7931abf64ab6494bae0d9884536e97d}{trackerbox}
+\item 
+vector$<$ Mat $>$ \hyperlink{classParticleFilter_a83d30593ad7fb15decdc3ed135dcde0c}{Multi\-H\-S\-V\-Template}
+\item 
+\hypertarget{classParticleFilter_af325f836517447303d8f06b50af71b9f}{bool {\bfseries rely\-\_\-detection}}\label{classParticleFilter_af325f836517447303d8f06b50af71b9f}
+
+\item 
+\hypertarget{classParticleFilter_a736488bb4a98a52b439926c09b36f254}{double {\bfseries sigma\-\_\-propagate} \mbox{[}N\-U\-M\-\_\-\-S\-T\-A\-T\-E\-S\mbox{]} =\{0.\-0, 0.\-0, 0.\-0, 0.\-0\}}\label{classParticleFilter_a736488bb4a98a52b439926c09b36f254}
+
+\item 
+\hypertarget{classParticleFilter_a1ecbbf2428339e5f606570c7b6fa69e8}{double {\bfseries sigma\-\_\-measurement} = 5.\-0}\label{classParticleFilter_a1ecbbf2428339e5f606570c7b6fa69e8}
+
+\item 
+double \hyperlink{classParticleFilter_ac7dbf011c2d2605fe32dcd2223af0d94}{c\-\_\-det} = 1.\-0
+\item 
+double \hyperlink{classParticleFilter_af962f9679adc8d9b9a7231ed9385cc77}{c\-\_\-col} = 1.\-0
+\item 
+double \hyperlink{classParticleFilter_af4f11088b2a93f38f9f1719a734032cc}{m\-\_\-c\-\_\-det} = 1.\-0
+\item 
+double \hyperlink{classParticleFilter_a1895837e832bd2f05bd5e4a23b4b50c0}{m\-\_\-c\-\_\-col} = 1.\-0
+\item 
+int \hyperlink{classParticleFilter_abdccfa3c90b27db7fa20ccc059687073}{height\-\_\-} = 100
+\item 
+int \hyperlink{classParticleFilter_ae4baf27a40a3b7a3def7402dfaba3908}{width\-\_\-} = 80
+\item 
+vector$<$ Point $>$ \hyperlink{classParticleFilter_a4c20cd268532c1e9814c4ce1b1913d76}{P\-F\-Track\-Series}
+\item 
+int \hyperlink{classParticleFilter_adb05b2cbeb1b467ef5328b9d3c43f69c}{times\-\_\-occluded}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classParticleFilter_a911e43a6edf42f84f8d0f2bf3fe9a81d}{\index{Particle\-Filter@{Particle\-Filter}!Particle\-Filter@{Particle\-Filter}}
+\index{Particle\-Filter@{Particle\-Filter}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{Particle\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Particle\-Filter\-::\-Particle\-Filter (
+\begin{DoxyParamCaption}
+\item[{Mat}]{frame0 = {\ttfamily Mat(0,0,0)}, }
+\item[{unsigned int}]{n\-\_\-particles = {\ttfamily 0}, }
+\item[{int}]{detidx = {\ttfamily 0}, }
+\item[{int}]{frame = {\ttfamily 0}, }
+\item[{Rect}]{detection\-B\-B = {\ttfamily Rect(0,0,0,0)}, }
+\item[{int}]{use\-\_\-hist = {\ttfamily 0}, }
+\item[{int}]{imgcols = {\ttfamily 0}, }
+\item[{int}]{imgrows = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a911e43a6edf42f84f8d0f2bf3fe9a81d}
+Particle\-Filter.\-cpp A constructor for \hyperlink{classParticleFilter}{Particle\-Filter} class.
+
+This is constructor for \hyperlink{classParticleFilter}{Particle\-Filter} Class to construct a tracker. frame0 is image matrix from get\-Frame(..) function. detidx is index of detection frame is current number of frame detection\-B\-B is bounding box for a detection use\-\_\-hist = 1, calculate color appearance model without dividing it into 3 regions use\-\_\-hist = 2, calculate color appearance model by dividing it into 3 regions use\-\_\-hist = 3, calculate color appearance model by dividing it into 3 regions and overlap each other imgcols is width of frame image imgrows is height of frame image
+
+\subsection{Member Function Documentation}
+\hypertarget{classParticleFilter_adb05ace32154b17c2bb042ea97490ec7}{\index{Particle\-Filter@{Particle\-Filter}!compute\-H\-S\-V\-Hist@{compute\-H\-S\-V\-Hist}}
+\index{compute\-H\-S\-V\-Hist@{compute\-H\-S\-V\-Hist}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{compute\-H\-S\-V\-Hist}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::compute\-H\-S\-V\-Hist (
+\begin{DoxyParamCaption}
+\item[{const Mat}]{src, }
+\item[{Mat \&}]{out\-Hist}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_adb05ace32154b17c2bb042ea97490ec7}
+Function to compute H\-S\-V histogram of image src\hypertarget{classParticleFilter_acae1f0241299cc95109879173588f62f}{\index{Particle\-Filter@{Particle\-Filter}!get\-Detection\-Index@{get\-Detection\-Index}}
+\index{get\-Detection\-Index@{get\-Detection\-Index}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{get\-Detection\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\-Filter\-::get\-Detection\-Index (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_acae1f0241299cc95109879173588f62f}
+Function to get index of tracker.
+
+This function will return index of tracker.\hypertarget{classParticleFilter_a597529ba9f75bf4e56da5768cbc8b1a0}{\index{Particle\-Filter@{Particle\-Filter}!get\-Main\-Data@{get\-Main\-Data}}
+\index{get\-Main\-Data@{get\-Main\-Data}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{get\-Main\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::get\-Main\-Data (
+\begin{DoxyParamCaption}
+\item[{double}]{sigma\-\_\-propagate\-\_\-\mbox{[}\-N\-U\-M\-\_\-\-S\-T\-A\-T\-E\-S\mbox{]}, }
+\item[{double const \&}]{sigma\-\_\-measurement\-\_\-, }
+\item[{double const \&}]{c\-\_\-detection\-\_\-, }
+\item[{double const \&}]{c\-\_\-color\-\_\-, }
+\item[{double const \&}]{mul\-\_\-factor\-\_\-c\-\_\-color\-\_\-, }
+\item[{double const \&}]{mul\-\_\-factor\-\_\-c\-\_\-detection\-\_\-, }
+\item[{int const \&}]{width\-\_\-default\-\_\-, }
+\item[{int const \&}]{height\-\_\-default\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a597529ba9f75bf4e56da5768cbc8b1a0}
+Function to get configuration data.
+
+Get the data from the configuration file which is opened in main file All of the arguments are the data that are needed by this class, but passed from configuration file, through the main file\hypertarget{classParticleFilter_ad102c26410be44ad35abd7b237fca96d}{\index{Particle\-Filter@{Particle\-Filter}!get\-Mean\-Position@{get\-Mean\-Position}}
+\index{get\-Mean\-Position@{get\-Mean\-Position}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{get\-Mean\-Position}]{\setlength{\rightskip}{0pt plus 5cm}Point Particle\-Filter\-::get\-Mean\-Position (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_ad102c26410be44ad35abd7b237fca96d}
+Get the mean position from all of particles
+
+return datatype Point\hypertarget{classParticleFilter_acf5397c9e4a72db53fbea7bbe058cf4e}{\index{Particle\-Filter@{Particle\-Filter}!get\-Point\-Target@{get\-Point\-Target}}
+\index{get\-Point\-Target@{get\-Point\-Target}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{get\-Point\-Target}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ Point $>$ \& Particle\-Filter\-::get\-Point\-Target (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_acf5397c9e4a72db53fbea7bbe058cf4e}
+Return the tracker position with datatype Point\hypertarget{classParticleFilter_af33fa2bedc9ca22ad4ee2caba29468e0}{\index{Particle\-Filter@{Particle\-Filter}!get\-Rely\-Detection@{get\-Rely\-Detection}}
+\index{get\-Rely\-Detection@{get\-Rely\-Detection}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{get\-Rely\-Detection}]{\setlength{\rightskip}{0pt plus 5cm}bool Particle\-Filter\-::get\-Rely\-Detection (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_af33fa2bedc9ca22ad4ee2caba29468e0}
+Function to get the state of flag Rely Detection\hypertarget{classParticleFilter_a3f4e7d132dd02967256b15d32e12b165}{\index{Particle\-Filter@{Particle\-Filter}!get\-Times\-Occluded@{get\-Times\-Occluded}}
+\index{get\-Times\-Occluded@{get\-Times\-Occluded}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{get\-Times\-Occluded}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\-Filter\-::get\-Times\-Occluded (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a3f4e7d132dd02967256b15d32e12b165}
+Return the number of how many frames the tracker occluded\hypertarget{classParticleFilter_ada58fdad64889b721f9347300c28a651}{\index{Particle\-Filter@{Particle\-Filter}!get\-Tracker\-Height@{get\-Tracker\-Height}}
+\index{get\-Tracker\-Height@{get\-Tracker\-Height}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{get\-Tracker\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\-Filter\-::get\-Tracker\-Height (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_ada58fdad64889b721f9347300c28a651}
+Function to get height of tracker bounding box\hypertarget{classParticleFilter_a6e77900524cf6d902285818926e98c57}{\index{Particle\-Filter@{Particle\-Filter}!get\-Tracker\-Width@{get\-Tracker\-Width}}
+\index{get\-Tracker\-Width@{get\-Tracker\-Width}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{get\-Tracker\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\-Filter\-::get\-Tracker\-Width (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a6e77900524cf6d902285818926e98c57}
+Function to get width of tracker bounding box\hypertarget{classParticleFilter_a295b03c569caeb44cb4f6bb19a2c6b59}{\index{Particle\-Filter@{Particle\-Filter}!H\-S\-V\-Interp@{H\-S\-V\-Interp}}
+\index{H\-S\-V\-Interp@{H\-S\-V\-Interp}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{H\-S\-V\-Interp}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::\-H\-S\-V\-Interp (
+\begin{DoxyParamCaption}
+\item[{Mat}]{H\-S\-V1, }
+\item[{Mat}]{H\-S\-V2, }
+\item[{Mat \&}]{res}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a295b03c569caeb44cb4f6bb19a2c6b59}
+Interpolate two H\-S\-V histogram with weight w\hypertarget{classParticleFilter_acc2dee02554e66ef0b26eb11f5a32d04}{\index{Particle\-Filter@{Particle\-Filter}!inc\-Times\-Occluded@{inc\-Times\-Occluded}}
+\index{inc\-Times\-Occluded@{inc\-Times\-Occluded}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{inc\-Times\-Occluded}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::inc\-Times\-Occluded (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_acc2dee02554e66ef0b26eb11f5a32d04}
+Increment times occluded\hypertarget{classParticleFilter_a62028a3f90bd02f924fd2367451a5614}{\index{Particle\-Filter@{Particle\-Filter}!initialization@{initialization}}
+\index{initialization@{initialization}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{initialization}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::initialization (
+\begin{DoxyParamCaption}
+\item[{Rect}]{detection}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a62028a3f90bd02f924fd2367451a5614}
+Function to initialize all variables.\hypertarget{classParticleFilter_a6a0dc76f01919eb2eced75ba0092d69d}{\index{Particle\-Filter@{Particle\-Filter}!is\-In\-Boundary@{is\-In\-Boundary}}
+\index{is\-In\-Boundary@{is\-In\-Boundary}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{is\-In\-Boundary}]{\setlength{\rightskip}{0pt plus 5cm}bool Particle\-Filter\-::is\-In\-Boundary (
+\begin{DoxyParamCaption}
+\item[{Rect}]{r, }
+\item[{Mat}]{image}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a6a0dc76f01919eb2eced75ba0092d69d}
+Function to check whether r is in boundary of the image or not\hypertarget{classParticleFilter_a81cbc751eb7bd585b0acfa380930c8de}{\index{Particle\-Filter@{Particle\-Filter}!measurement@{measurement}}
+\index{measurement@{measurement}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{measurement}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::measurement (
+\begin{DoxyParamCaption}
+\item[{Mat\-\_\-$<$ double $>$ \&}]{particles, }
+\item[{Rect}]{detection\-\_\-new, }
+\item[{Mat}]{H\-S\-Vinterpolated, }
+\item[{vector$<$ Mat $>$ \&}]{Multi\-H\-S\-V\-Interpolated, }
+\item[{Mat \&}]{image, }
+\item[{int}]{use\-\_\-hist, }
+\item[{int}]{frame}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a81cbc751eb7bd585b0acfa380930c8de}
+Measurement step of particle filter\hypertarget{classParticleFilter_a8ceef9972d364c1b53803403440ef439}{\index{Particle\-Filter@{Particle\-Filter}!prediction@{prediction}}
+\index{prediction@{prediction}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{prediction}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::prediction (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{image}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a8ceef9972d364c1b53803403440ef439}
+Prediction step of particle filter\hypertarget{classParticleFilter_a6bdd0c3e0160e1b89d4cbfd736eaffd0}{\index{Particle\-Filter@{Particle\-Filter}!print\-Particles@{print\-Particles}}
+\index{print\-Particles@{print\-Particles}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{print\-Particles}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::print\-Particles (
+\begin{DoxyParamCaption}
+\item[{Mat\-\_\-$<$ double $>$ \&}]{particles}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a6bdd0c3e0160e1b89d4cbfd736eaffd0}
+Function to print and debug particles.
+
+Run this function to know where the particles are. Use it when debug the code.\hypertarget{classParticleFilter_a65e44b839c45cdace2aa1bc630097cf8}{\index{Particle\-Filter@{Particle\-Filter}!print\-Weight@{print\-Weight}}
+\index{print\-Weight@{print\-Weight}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{print\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::print\-Weight (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a65e44b839c45cdace2aa1bc630097cf8}
+Function to print weight of every particle.
+
+Run this function to know the value of weight of every particle. Use it when debug the code.\hypertarget{classParticleFilter_a538bf422aad5ea4eb42fb766cd15831c}{\index{Particle\-Filter@{Particle\-Filter}!reset\-Times\-Occluded@{reset\-Times\-Occluded}}
+\index{reset\-Times\-Occluded@{reset\-Times\-Occluded}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{reset\-Times\-Occluded}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::reset\-Times\-Occluded (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a538bf422aad5ea4eb42fb766cd15831c}
+Reset the occlusion time\hypertarget{classParticleFilter_a8bf63399d1566c933e46917ff8d2218c}{\index{Particle\-Filter@{Particle\-Filter}!set\-Rely\-Detection@{set\-Rely\-Detection}}
+\index{set\-Rely\-Detection@{set\-Rely\-Detection}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{set\-Rely\-Detection}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::set\-Rely\-Detection (
+\begin{DoxyParamCaption}
+\item[{bool}]{rd}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a8bf63399d1566c933e46917ff8d2218c}
+Function to set flag Rely Detection\hypertarget{classParticleFilter_a3586ef733bc68c6c7c56379ac018a486}{\index{Particle\-Filter@{Particle\-Filter}!systematic\-Resampling@{systematic\-Resampling}}
+\index{systematic\-Resampling@{systematic\-Resampling}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{systematic\-Resampling}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\-Filter\-::systematic\-Resampling (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$ \&}]{w, }
+\item[{vector$<$ int $>$ \&}]{indx}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a3586ef733bc68c6c7c56379ac018a486}
+Resampling step of particle filter\hypertarget{classParticleFilter_a3dd040ad3bc638548ba4582d44855fc5}{\index{Particle\-Filter@{Particle\-Filter}!update@{update}}
+\index{update@{update}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}bool Particle\-Filter\-::update (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{img, }
+\item[{Mat \&}]{img\-\_\-prev, }
+\item[{Rect \&}]{detection\-\_\-new, }
+\item[{int}]{use\-\_\-hist, }
+\item[{int}]{frame\-\_\-num}
+\end{DoxyParamCaption}
+)}}\label{classParticleFilter_a3dd040ad3bc638548ba4582d44855fc5}
+Update step for the tracker after prediction
+
+Here, \hyperlink{classParticleFilter_a3dd040ad3bc638548ba4582d44855fc5}{update()} function contains measurement step, resampling step, and get the mean value of all particles.
+
+\subsection{Member Data Documentation}
+\hypertarget{classParticleFilter_af962f9679adc8d9b9a7231ed9385cc77}{\index{Particle\-Filter@{Particle\-Filter}!c\-\_\-col@{c\-\_\-col}}
+\index{c\-\_\-col@{c\-\_\-col}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{c\-\_\-col}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\-Filter\-::c\-\_\-col = 1.\-0\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_af962f9679adc8d9b9a7231ed9385cc77}
+Constant for color model \hypertarget{classParticleFilter_ac7dbf011c2d2605fe32dcd2223af0d94}{\index{Particle\-Filter@{Particle\-Filter}!c\-\_\-det@{c\-\_\-det}}
+\index{c\-\_\-det@{c\-\_\-det}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{c\-\_\-det}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\-Filter\-::c\-\_\-det = 1.\-0\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_ac7dbf011c2d2605fe32dcd2223af0d94}
+Constant for detection model \hypertarget{classParticleFilter_a608013ea3cc68c34c465611444a6e25d}{\index{Particle\-Filter@{Particle\-Filter}!cumulative@{cumulative}}
+\index{cumulative@{cumulative}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{cumulative}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Particle\-Filter\-::cumulative\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a608013ea3cc68c34c465611444a6e25d}
+vector to store cumulative normalized weight of particles \hypertarget{classParticleFilter_a594c1a59fdf0251267c64828850a085f}{\index{Particle\-Filter@{Particle\-Filter}!detectionprev@{detectionprev}}
+\index{detectionprev@{detectionprev}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{detectionprev}]{\setlength{\rightskip}{0pt plus 5cm}Rect Particle\-Filter\-::detectionprev\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a594c1a59fdf0251267c64828850a085f}
+Store previous data detection \hypertarget{classParticleFilter_abdccfa3c90b27db7fa20ccc059687073}{\index{Particle\-Filter@{Particle\-Filter}!height\-\_\-@{height\-\_\-}}
+\index{height\-\_\-@{height\-\_\-}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{height\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\-Filter\-::height\-\_\- = 100\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_abdccfa3c90b27db7fa20ccc059687073}
+Bounding box height default \hypertarget{classParticleFilter_a4bf1b980e79eb4677a6274cbc70be0fa}{\index{Particle\-Filter@{Particle\-Filter}!H\-S\-V\-Template@{H\-S\-V\-Template}}
+\index{H\-S\-V\-Template@{H\-S\-V\-Template}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{H\-S\-V\-Template}]{\setlength{\rightskip}{0pt plus 5cm}Mat Particle\-Filter\-::\-H\-S\-V\-Template\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a4bf1b980e79eb4677a6274cbc70be0fa}
+Store histogram of object template \hypertarget{classParticleFilter_a5cd6a05af7e09715cc7728abac18d38e}{\index{Particle\-Filter@{Particle\-Filter}!image\-Template@{image\-Template}}
+\index{image\-Template@{image\-Template}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{image\-Template}]{\setlength{\rightskip}{0pt plus 5cm}Mat Particle\-Filter\-::image\-Template\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a5cd6a05af7e09715cc7728abac18d38e}
+Store object template \hypertarget{classParticleFilter_a1895837e832bd2f05bd5e4a23b4b50c0}{\index{Particle\-Filter@{Particle\-Filter}!m\-\_\-c\-\_\-col@{m\-\_\-c\-\_\-col}}
+\index{m\-\_\-c\-\_\-col@{m\-\_\-c\-\_\-col}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{m\-\_\-c\-\_\-col}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\-Filter\-::m\-\_\-c\-\_\-col = 1.\-0\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a1895837e832bd2f05bd5e4a23b4b50c0}
+Constant for color model if there is an occlusion \hypertarget{classParticleFilter_af4f11088b2a93f38f9f1719a734032cc}{\index{Particle\-Filter@{Particle\-Filter}!m\-\_\-c\-\_\-det@{m\-\_\-c\-\_\-det}}
+\index{m\-\_\-c\-\_\-det@{m\-\_\-c\-\_\-det}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{m\-\_\-c\-\_\-det}]{\setlength{\rightskip}{0pt plus 5cm}double Particle\-Filter\-::m\-\_\-c\-\_\-det = 1.\-0\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_af4f11088b2a93f38f9f1719a734032cc}
+Constant for detection model if there is an occlusion \hypertarget{classParticleFilter_a83d30593ad7fb15decdc3ed135dcde0c}{\index{Particle\-Filter@{Particle\-Filter}!Multi\-H\-S\-V\-Template@{Multi\-H\-S\-V\-Template}}
+\index{Multi\-H\-S\-V\-Template@{Multi\-H\-S\-V\-Template}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{Multi\-H\-S\-V\-Template}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$Mat$>$ Particle\-Filter\-::\-Multi\-H\-S\-V\-Template\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a83d30593ad7fb15decdc3ed135dcde0c}
+array to store 3 regions of template histogram \hypertarget{classParticleFilter_ae9823740efabda90ff9c24b7b8f91dc5}{\index{Particle\-Filter@{Particle\-Filter}!particles@{particles}}
+\index{particles@{particles}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{particles}]{\setlength{\rightskip}{0pt plus 5cm}Mat\-\_\-$<$double$>$ Particle\-Filter\-::particles\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_ae9823740efabda90ff9c24b7b8f91dc5}
+Location of particles before propagated \hypertarget{classParticleFilter_ab006458e205d5d2f6e6f554ee5abfe81}{\index{Particle\-Filter@{Particle\-Filter}!particles\-\_\-new@{particles\-\_\-new}}
+\index{particles\-\_\-new@{particles\-\_\-new}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{particles\-\_\-new}]{\setlength{\rightskip}{0pt plus 5cm}Mat\-\_\-$<$double$>$ Particle\-Filter\-::particles\-\_\-new\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_ab006458e205d5d2f6e6f554ee5abfe81}
+Location of new particles after propagated \hypertarget{classParticleFilter_aa86c3e9fab84151e57b81035e664fefc}{\index{Particle\-Filter@{Particle\-Filter}!P\-F\-Track@{P\-F\-Track}}
+\index{P\-F\-Track@{P\-F\-Track}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{P\-F\-Track}]{\setlength{\rightskip}{0pt plus 5cm}Point\-\_\-$<$int$>$ Particle\-Filter\-::\-P\-F\-Track\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_aa86c3e9fab84151e57b81035e664fefc}
+Tracker position in current frame \hypertarget{classParticleFilter_a1f55e5d172c164c03fb3174fb321a251}{\index{Particle\-Filter@{Particle\-Filter}!P\-F\-Track\-Prev@{P\-F\-Track\-Prev}}
+\index{P\-F\-Track\-Prev@{P\-F\-Track\-Prev}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{P\-F\-Track\-Prev}]{\setlength{\rightskip}{0pt plus 5cm}Point\-\_\-$<$int$>$ Particle\-Filter\-::\-P\-F\-Track\-Prev\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a1f55e5d172c164c03fb3174fb321a251}
+Tracker position in previous frame \hypertarget{classParticleFilter_a4c20cd268532c1e9814c4ce1b1913d76}{\index{Particle\-Filter@{Particle\-Filter}!P\-F\-Track\-Series@{P\-F\-Track\-Series}}
+\index{P\-F\-Track\-Series@{P\-F\-Track\-Series}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{P\-F\-Track\-Series}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$Point$>$ Particle\-Filter\-::\-P\-F\-Track\-Series\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a4c20cd268532c1e9814c4ce1b1913d76}
+Array to store last 4 frames tracker position \hypertarget{classParticleFilter_a1209f1d4f8a33ea69e60cb8c021b96c2}{\index{Particle\-Filter@{Particle\-Filter}!P\-F\-Track\-Vel@{P\-F\-Track\-Vel}}
+\index{P\-F\-Track\-Vel@{P\-F\-Track\-Vel}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{P\-F\-Track\-Vel}]{\setlength{\rightskip}{0pt plus 5cm}Point\-\_\-$<$double$>$ Particle\-Filter\-::\-P\-F\-Track\-Vel\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a1209f1d4f8a33ea69e60cb8c021b96c2}
+Tracker velocity in current frame \hypertarget{classParticleFilter_a92daeb1540baafc2b3bf6fec5b607120}{\index{Particle\-Filter@{Particle\-Filter}!point\-\_\-for\-\_\-particles@{point\-\_\-for\-\_\-particles}}
+\index{point\-\_\-for\-\_\-particles@{point\-\_\-for\-\_\-particles}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{point\-\_\-for\-\_\-particles}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$Point\-\_\-$<$int$>$ $>$ Particle\-Filter\-::point\-\_\-for\-\_\-particles\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a92daeb1540baafc2b3bf6fec5b607120}
+Location of particles in a tracker in Point datatype \hypertarget{classParticleFilter_adb05b2cbeb1b467ef5328b9d3c43f69c}{\index{Particle\-Filter@{Particle\-Filter}!times\-\_\-occluded@{times\-\_\-occluded}}
+\index{times\-\_\-occluded@{times\-\_\-occluded}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{times\-\_\-occluded}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\-Filter\-::times\-\_\-occluded\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_adb05b2cbeb1b467ef5328b9d3c43f69c}
+store how many frames the occlusion has been occurred \hypertarget{classParticleFilter_ad7931abf64ab6494bae0d9884536e97d}{\index{Particle\-Filter@{Particle\-Filter}!trackerbox@{trackerbox}}
+\index{trackerbox@{trackerbox}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{trackerbox}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$Rect$>$ Particle\-Filter\-::trackerbox\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_ad7931abf64ab6494bae0d9884536e97d}
+Store tracker bounding box \hypertarget{classParticleFilter_a1363d05f9deb026bd5e07a1406a994e5}{\index{Particle\-Filter@{Particle\-Filter}!weight@{weight}}
+\index{weight@{weight}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{weight}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Particle\-Filter\-::weight\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_a1363d05f9deb026bd5e07a1406a994e5}
+vector to store weight of particles \hypertarget{classParticleFilter_ae4baf27a40a3b7a3def7402dfaba3908}{\index{Particle\-Filter@{Particle\-Filter}!width\-\_\-@{width\-\_\-}}
+\index{width\-\_\-@{width\-\_\-}!ParticleFilter@{Particle\-Filter}}
+\subsubsection[{width\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Particle\-Filter\-::width\-\_\- = 80\hspace{0.3cm}{\ttfamily [protected]}}}\label{classParticleFilter_ae4baf27a40a3b7a3def7402dfaba3908}
+Bounding box width default 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Particle\-Filter.\-h\item 
+Particle\-Filter.\-cpp\end{DoxyCompactItemize}
