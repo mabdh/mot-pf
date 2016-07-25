@@ -113,4 +113,4 @@ particlefilter :
 
 The documentation of ParticleFilter class can be found here [Particle Filter Class](https://mabdh.github.io/Particle-Filter/classParticleFilter.html)
 
-The report can be found here [Project Report](https://github.com/mabdh/Particle-Filter/blob/master/LabReportv2.pdf)
+The report can be found here [Project Report](https://github.com/mabdh/Particle-Filter/blob/master/pdf/LabReportv2.pdf)
