@@ -13,7 +13,9 @@ This directory contains :
 - Debug
 - Evaluate
 > Store evaluation data for every experiment. ex : *Eval1_* is the second experiment. Create folder of EvalN_ manually if you want to do N+1 experiments. With data format : 
-```x-axis-FalseNegative-FalsePositive-TruePositive-IDSwitch-MOTA-MOTP```
+```
+x-axis-FalseNegative-FalsePositive-TruePositive-IDSwitch-MOTA-MOTP
+```
 (could be anything, example: number of particles, sigma propagation, etc)
 
 - PETS_frame
@@ -21,7 +23,9 @@ This directory contains :
 
 - PETS_gt,
 > Contain ground truth data with filename format frame_0000.txt. With data format :
-```number_of_frame-x(top-left)-y(top-left)-width-height-index```
+```
+number_of_frame-x(top-left)-y(top-left)-width-height-index
+```
 
 - PETS_GT_map
 > Contain detection maps from ground truth
