@@ -12,36 +12,17 @@ This is an Eclipse Project.
 
 ## Structure of Directory
 This directory contains :
-- Debug
-- Evaluate
-> Store evaluation data for every experiment. ex : *Eval1_* is the second experiment. Create folder of EvalN_ manually if you want to do N+1 experiments. With data format : 
-```
-x-axis-FalseNegative-FalsePositive-TruePositive-IDSwitch-MOTA-MOTP
-```
-(could be anything, example: number of particles, sigma propagation, etc)
 
-- PETS_frame
-> Contain sequence of video. With filename **format frame_0000.jpg**
+- Debug and Evaluate - Store evaluation data for every experiment. ex : *Eval1_* is the second experiment. Create folder of EvalN_ manually if you want to do N+1 experiments. With data format `x-axis-FalseNegative-FalsePositive-TruePositive-IDSwitch-MOTA-MOTP` (could be anything, example: number of particles, sigma propagation, etc)
 
-- PETS_gt,
-> Contain ground truth data with filename format frame_0000.txt. With data format :
-```
-number_of_frame-x(top-left)-y(top-left)-width-height-index
-```
+- PETS_frame - Contain sequence of video. With filename **format frame_0000.jpg**
 
-- PETS_GT_map
-> Contain detection maps from ground truth
-
-- PETS_map
-> Contain detection maps from detectors
+- PETS_gt - Contain ground truth data with filename format frame_0000.txt. With data format `number_of_frame-x(top-left)-y(top-left)-width-height-index`
+- PETS_GT_map - Contain detection maps from ground truth
+- PETS_map - Contain detection maps from detectors
 - src
-- TrackerData
-> Contain ground truth data with filename format frame_0000.txt. With data format : 
- ```
- number_of_frame-x(top-left)-y(top-left)-width-height-index
- ```
-- View1_result
-> Result of tracked objects on the image
+- TrackerData - Contain ground truth data with filename format frame_0000.txt. With data format `number_of_frame-x(top-left)-y(top-left)-width-height-index`
+- View1_result - Result of tracked objects on the image
 
 ## Note 
 There is also 
@@ -50,7 +31,7 @@ There is also
 	- EvaluateNumParticles (To evaluate tracker with x-axis is number of particles)
 	- EvaluatePETS (To evaluate tracker with x-axis is sigma_of_propagation (could be changed..))
 
-##Dependencies
+## Dependencies
 In Eclipse project. Go to
 ```
 Project->Properties->C/C++ Build->Settings
@@ -67,7 +48,7 @@ Linker->Libraries->add Libraries (-l) "config++"
 ```
 
 
-##Configuration File Structure
+## Configuration File Structure
 
 ```
 particlefilter :

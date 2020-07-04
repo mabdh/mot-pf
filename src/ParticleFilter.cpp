@@ -33,13 +33,13 @@ ParticleFilter::ParticleFilter(Mat frame0, unsigned int n_particles, int detidx,
     particles_new = Mat_<double>::zeros(numParticles, NUM_STATES);
     particles_temp = Mat_<double>::zeros(numParticles, NUM_STATES);
     float init = 1.0/numParticles;
-
     
     for (unsigned int i=0; i<numParticles; i++){
         weight.push_back(init);
         cumulative.push_back(init);
         point_for_particles.push_back(Point(0,0));
     }
+
     cumulative.push_back(init);
     setRelyDetection(true);
 
